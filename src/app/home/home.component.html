@@ -1,35 +1,100 @@
 <div class="min-h-screen bg-gray-100">
-    <main class="w-3/4 mx-auto text-center py-16">
-      <h2 class="text-4xl font-extrabold text-gray-900 leading-tight mb-4">
-        Building the Future of Technology
-      </h2>
+  <!-- Main Hero Section -->
+  <main class="w-3/4 mx-auto text-center py-16 fade-in">
+    <h2 class="text-4xl font-extrabold text-gray-900 leading-tight mb-4">
+      Building the Future of Technology
+    </h2>
+    <p class="text-lg text-gray-600 mb-8">
+      At TechStart, we innovate and develop cutting-edge solutions to solve today’s technology challenges.
+    </p>
+    <a href="#" class="bg-indigo-600 text-white py-2 px-6 rounded-full shadow-md hover:bg-indigo-500 transition">
+      Learn More
+    </a>
+  </main>
+
+  <!-- First Section: Services -->
+  <section class="bg-gray-200 py-16 fade-in">
+    <div class="w-3/4 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Innovative Solutions</h3>
+        <p class="text-gray-600">Providing state-of-the-art solutions for emerging tech industries.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Dedicated Support</h3>
+        <p class="text-gray-600">Our team is here to help you every step of the way.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Expert Team</h3>
+        <p class="text-gray-600">Led by industry experts with years of experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Section: Our Mission -->
+  <section class="bg-white py-16 fade-in">
+    <div class="w-3/4 mx-auto text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Our Mission</h2>
       <p class="text-lg text-gray-600 mb-8">
-        At TechStart, we innovate and develop cutting-edge solutions to solve today’s technology challenges.
+        To leverage cutting-edge technologies that enable organizations to scale, grow, and remain competitive in the ever-evolving tech landscape.
       </p>
       <a href="#" class="bg-indigo-600 text-white py-2 px-6 rounded-full shadow-md hover:bg-indigo-500 transition">
-        Learn More
+        Learn More About Us
       </a>
-    </main>
-  
-    <section class="bg-gray-200 py-16">
-      <div class="w-3/4 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <h3 class="text-2xl font-semibold text-gray-800 mb-2">Innovative Solutions</h3>
-          <p class="text-gray-600">
-            Providing state-of-the-art solutions for emerging tech industries.
-          </p>
+    </div>
+  </section>
+
+  <!-- New Section: Technologies We Use -->
+  <section class="bg-gray-200 py-16 fade-in">
+    <div class="w-3/4 mx-auto text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Technologies We Use</h2>
+      <p class="text-lg text-gray-600 mb-8">Our platform is built on the latest technologies to ensure speed, scalability, and security.</p>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Cloud Computing</h3>
+          <p class="text-gray-600">We utilize cloud infrastructure to ensure seamless scalability.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <h3 class="text-2xl font-semibold text-gray-800 mb-2">Dedicated Support</h3>
-          <p class="text-gray-600">Our team is here to help you every step of the way.</p>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">AI & Machine Learning</h3>
+          <p class="text-gray-600">Our solutions harness the power of AI to drive innovation.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <h3 class="text-2xl font-semibold text-gray-800 mb-2">Expert Team</h3>
-          <p class="text-gray-600">
-            Led by industry experts with years of experience.
-          </p>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Cybersecurity</h3>
+          <p class="text-gray-600">Security is paramount in everything we do, keeping data and operations safe.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Blockchain</h3>
+          <p class="text-gray-600">We explore blockchain technologies to revolutionize secure transactions.</p>
         </div>
       </div>
-    </section>
-  </div>
-  
+    </div>
+  </section>
+
+  <!-- New Section: Contact Us -->
+  <section class="bg-white py-16 fade-in">
+    <div class="w-3/4 mx-auto text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Get in Touch</h2>
+      <p class="text-lg text-gray-600 mb-8">Have any questions? We'd love to hear from you!</p>
+      <a href="#" class="bg-indigo-600 text-white py-2 px-6 rounded-full shadow-md hover:bg-indigo-500 transition">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+  <script>
+    // JavaScript for scroll-triggered animation
+    const elements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Stop observing once it's visible
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+  </script>
+</div>
