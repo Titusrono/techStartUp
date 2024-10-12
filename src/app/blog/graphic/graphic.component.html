@@ -1,0 +1,58 @@
+<div class="bg-white p-6 rounded-lg shadow-lg">
+    <!-- Responsive Image -->
+    <img 
+      src="../assets/innovation.jpeg" 
+      alt="Tech Innovation Blog Image" 
+      class="w-full h-48 object-cover rounded-lg mb-4 hover:shadow-lg transition-shadow duration-300 ease-in-out"
+      style="max-width: 100%; height: auto;">
+    
+    <!-- Title of the Blog Post -->
+    <h3 class="text-2xl font-semibold text-gray-800 mb-2">
+      The Future of Tech Innovation
+    </h3>
+  
+    <!-- Blog Content -->
+    <p class="text-gray-600 mb-4">
+      Discover how technology is shaping the future and what emerging trends to look out for in AI, Blockchain, and Cloud Computing.
+    </p>
+  
+    <!-- Call to Action Link -->
+    <a 
+      href="/graphics" 
+      class="text-indigo-600 font-semibold hover:underline transition-transform transform hover:scale-105"
+      style="display: inline-block;">
+      Read More
+    </a>
+  </div>
+  
+  <!-- Responsive Script (optional) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const blogImage = document.querySelector('img');
+      const windowWidth = window.innerWidth;
+      
+      // Resize the image dynamically based on window size
+      window.addEventListener('resize', () => {
+        const newWidth = window.innerWidth;
+        
+        if (newWidth <= 640) { // Small devices
+          blogImage.style.height = 'auto';
+        } else if (newWidth <= 1024) { // Tablets
+          blogImage.style.height = '48px';
+        } else { // Larger screens
+          blogImage.style.height = 'auto';
+        }
+      });
+  
+      // Smooth hover effect for "Read More" link
+      const readMoreLink = document.querySelector('a');
+      readMoreLink.addEventListener('mouseover', () => {
+        readMoreLink.style.transform = 'scale(1.1)';
+      });
+  
+      readMoreLink.addEventListener('mouseleave', () => {
+        readMoreLink.style.transform = 'scale(1)';
+      });
+    });
+  </script>
+  
