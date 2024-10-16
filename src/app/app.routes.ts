@@ -12,5 +12,9 @@ export const routes: Routes = [
     {'path':'contact', 'title':'Contact', component: ContactComponent},
     {'path':'about', 'title':'About', component: AboutComponent},
     {'path':'blog', 'title':'Blog', component: BlogComponent},
+    {'path':'blog', children:[
+        {'path':'blog-graphics', 'title':'Blog Details', component: BlogComponent},
+
+    ]},
     {'path':'**', 'title':'404', component: PagenotfoundComponent}
 ];
